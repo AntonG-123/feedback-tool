@@ -6,6 +6,8 @@ Desktop/laptop application. Previews of the reviewed site: desktop, tablet (768 
 
 ## Quick start (local)
 
+Step-by-step guide for testers: **[LOCAL-TESTING.md](LOCAL-TESTING.md)**.
+
 ```bash
 npm install
 npm run build          # builds the React app into dist/

@@ -7,3 +7,4 @@ playwright-report
 .env
 *.log
 tests/fixtures/sample.png
+agm-feedback-tool.zip
