@@ -15,7 +15,7 @@ async function ensureDatabaseUrl() {
   if (config.isProd) throw new Error('DATABASE_URL must be set in production');
   const { default: EmbeddedPostgres } = await import('embedded-postgres');
   const port = Number(process.env.EMBEDDED_PG_PORT || 54329);
-  const dir = process.env.EMBEDDED_PG_DIR || '/var/lib/agm-pg/data';
+  const dir = path.resolve(process.env.EMBEDDED_PG_DIR || 'data/pg');
   embedded = new EmbeddedPostgres({ databaseDir: dir, user: 'agm', password: 'agm', port, persistent: true, onLog: () => {} });
   if (!fs.existsSync(path.join(dir, 'PG_VERSION'))) await embedded.initialise();
   await embedded.start();
