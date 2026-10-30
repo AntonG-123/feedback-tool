@@ -1,0 +1,9 @@
+node_modules
+dist
+data
+.pgdata
+test-results
+playwright-report
+.env
+*.log
+tests/fixtures/sample.png
