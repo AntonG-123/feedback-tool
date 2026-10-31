@@ -32,7 +32,7 @@ test('SPA: client-side routing, root-relative fetch, dynamic import and pathname
   await f.locator('.spa-link').click();
   await expect(f.locator('.spa-title')).toHaveText('Products');
   await expect(f.locator('.item')).toHaveCount(3);
-  await expect(page.getByTestId('current-url')).toHaveText('https://spa.test/products');
+  await expect(page.getByTestId('current-url')).toHaveText('/products');
   // the visited route is added to the sitemap automatically
   await expect(page.getByTestId('pages-tree').locator('[data-path="/products"]')).toBeVisible();
   // comment on a client-rendered route

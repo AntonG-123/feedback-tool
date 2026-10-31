@@ -155,9 +155,7 @@ h1, h2, h3 { margin: 0; font-weight: 600; }
 .c-item .meta { font-size: 12px; color: var(--muted); display: flex; gap: 6px; align-items: center; margin-top: 4px; flex-wrap: wrap; }
 
 .canvas { flex: 1; position: relative; overflow: hidden; display: flex; flex-direction: column; min-width: 0; }
-.addr { height: 40px; display: flex; align-items: center; gap: 6px; padding: 0 12px; flex: none; }
-.addr .url { flex: 1; height: 28px; background: #fff; border: 1px solid var(--border); border-radius: 6px; display: flex; align-items: center; padding: 0 10px; font-size: 12px; color: var(--text-2); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
-.stage { flex: 1; position: relative; overflow: auto; display: flex; justify-content: center; min-height: 0; padding: 0 12px 12px; }
+.stage { flex: 1; position: relative; overflow: auto; display: flex; justify-content: center; min-height: 0; padding: 12px; }
 .device { position: relative; background: #fff; box-shadow: var(--shadow); border-radius: 6px; overflow: hidden; flex: none; height: 100%; }
 .device.desktop { width: 100%; }
 .device.tablet { width: 768px; }
@@ -221,7 +219,7 @@ h1, h2, h3 { margin: 0; font-weight: 600; }
 .vsep { width: 1px; height: 22px; background: var(--border); margin: 0 4px; }
 
 /* fullscreen */
-.ws.fullscreen .ws-header, .ws.fullscreen .sidebar, .ws.fullscreen .addr { display: none; }
+.ws.fullscreen .ws-header, .ws.fullscreen .sidebar { display: none; }
 .ws.fullscreen .stage { padding: 0; }
 .ws.fullscreen .device { border-radius: 0; box-shadow: none; }
 .fs-bar { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); z-index: 30; background: #fff; border: 1px solid var(--border); border-radius: 10px; box-shadow: var(--shadow-lg); display: flex; align-items: center; gap: 6px; padding: 4px; }

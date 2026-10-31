@@ -191,7 +191,7 @@ test('share link: guest navigates inside the proxy and comments without an accou
   await g.getByTestId('mode-browse').click();
   await frame(g).locator('nav a', { hasText: 'About' }).click();
   await expect(frame(g).locator('.page-title')).toHaveText('About us');
-  await expect(g.getByTestId('current-url')).toHaveText('https://static.test/about');
+  await expect(g.getByTestId('current-url')).toHaveText('/about');
   await expect(g.getByTestId('pages-tree').locator('.tree-row.active')).toContainText('About');
   // root-relative redirect followed inside the proxy
   // back home through the sitemap

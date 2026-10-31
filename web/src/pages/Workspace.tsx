@@ -401,7 +401,7 @@ export function WorkspacePage() {
       <header className="ws-header">
         <div className="left">
           {role === 'owner' && <Link className="icon-btn" to="/projects" title="All projects"><Icon.back /></Link>}
-          <div className="ws-title"><b>{data.project.name}</b><span>{currentPath}</span></div>
+          <div className="ws-title"><b>{data.project.name}</b><span title={currentUrl} data-testid="current-url">{currentPath}</span></div>
         </div>
         <div className="row" style={{ gap: 12 }}>{modeToggle}{deviceToggle}</div>
         <div className="right">
@@ -423,11 +423,6 @@ export function WorkspacePage() {
             : <CommentsPanel comments={comments} currentUrl={currentUrl} selectedId={selectedId} onSelect={selectComment} filter={filter} setFilter={setFilter} scope={scope} setScope={setScope} pages={pages} />}
         </aside>
         <main className="canvas">
-          <div className="addr">
-            <button className="icon-btn icon-btn-sm" title="Reload" onClick={reload}><Icon.reload size={15} /></button>
-            <div className="url" title={currentUrl} data-testid="current-url">{currentUrl}</div>
-            <a className="icon-btn icon-btn-sm" href={currentUrl} target="_blank" rel="noreferrer noopener" title="Open original page"><Icon.external size={15} /></a>
-          </div>
           <div className="stage">
             <div ref={deviceRef} className={`device ${bp} ${mode === 'comment' ? 'comment-mode' : ''}`} data-testid="device" data-bp={bp}>
               {frameUrl && proxy && (
